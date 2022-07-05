@@ -10,7 +10,8 @@ document.addEventListener("click", writePassword);
 
 // concatinate the strings based on user selection
 function writePassword() {
-    var numberChoice = prompt("Would you like to use Numbers?" + "\n" + "Choose Y or N");
+  do {  
+    var numberChoice = prompt("Would you like to use Number Characters?" + "\n" + "Choose Y or N");
         if (numberChoice === "Y") {
             var totalString = numbers;
         }
@@ -35,29 +36,38 @@ function writePassword() {
 
         if (totalString === ""){
           alert("You must choose at least one character type, try again");
-          
         }
-      
-    //define password length
-    var howMany = prompt("How many Characters would you like the Password to be?" + "\n" + "Choose from 8-128");
+      }
+  while(totalString === "");
+    
+      //define password length
+    do {
+      var howMany = prompt("How many Characters would you like the Password to be?" + "\n" + "Choose from 8-128");
         if (howMany > 7 && howMany < 129){
           var goodLength = howMany;   
         }
           else {
              alert("Incorrect Value Try again");
+             
           }
+      }
+    while(howMany < 8 || howMany >128);
     
-    //math for random character selection   
-       var password = [];
+      //math for random character selection   
+       var passArray = [];
      for (var i = 0; i < goodLength; i++) {     
          var generatePass = totalString[Math.floor(Math.random() * totalString.length)];
        
-         password.push(generatePass);
+         passArray.push(generatePass);
       }      
     
-      var passString = password.join("");
+      //Turn array returned into string
+      var password = passArray.join("");
       
-    console.log(passString);
+      //add password to box 
+      var passwordText = document.querySelector("#password");
+       passwordText.value = password;
+    
     }
   
 
@@ -65,14 +75,3 @@ function writePassword() {
 
 
 
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
