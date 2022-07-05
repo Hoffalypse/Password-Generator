@@ -24,6 +24,10 @@ The Answer must be between 8 and 128 or you will recieve an error message.
 
 Upon answering all the prompts with an appropriate value, a password will appear in the page box that meets all desired specifications. 
 
+## Link to Deployed Website 
+Give it a try!
+https://hoffalypse.github.io/Password-Generator/
+
 ## Technologies Used 
 * HTML (code by outside source) 
 * CSS (code by outside source)
