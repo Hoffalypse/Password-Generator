@@ -39,27 +39,26 @@ function writePassword() {
         }
       
     //define password length
-    // var howMany = prompt("How many Characters would you like the Password to be?" + "\n" + "Choose from 8-128");
-    //     if (howMany > 7 && howMany < 129){
-    //       var goodLength = howMany;   
-    //     }
-    //       else {
-    //          alert("Incorrect Value Try again");
-    //       }
+    var howMany = prompt("How many Characters would you like the Password to be?" + "\n" + "Choose from 8-128");
+        if (howMany > 7 && howMany < 129){
+          var goodLength = howMany;   
+        }
+          else {
+             alert("Incorrect Value Try again");
+          }
     
-    // //math for random character selection   
-    // var output = "";    
-    //  for (var i = 0; 1<= goodLength; i++) {     
-    //     var password = totalString[ Math.floor(Math.random() * totalString.length)];
-    //     output += totalString.substring(password, password +1);
-    //  }      
+    //math for random character selection   
+       var password = [];
+     for (var i = 0; i < goodLength; i++) {     
+         var generatePass = totalString[Math.floor(Math.random() * totalString.length)];
+       
+         password.push(generatePass);
+      }      
     
-    console.log(totalString);
-    
-
-
-
-  }
+      var passString = password.join("");
+      
+    console.log(passString);
+    }
   
 
 
