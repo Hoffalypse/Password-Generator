@@ -30,6 +30,6 @@ Upon answering all the prompts with an appropriate value, a password will appear
 * JavaScript 
 
 ## Acknowledgments
-Andres Jimenez (Tudor)
-Kirtley Adams (Teaching Assistant)
+Andres Jimenez (Tudor) /
+Kirtley Adams (Teaching Assistant) <br>
 Dan Kaltenbaugh (Instructor)
