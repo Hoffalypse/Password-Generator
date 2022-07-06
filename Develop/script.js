@@ -11,7 +11,7 @@ document.addEventListener("click", writePassword);
 // concatinate the strings based on user selection
 function writePassword() {
   do {  
-    var numberChoice = prompt("Would you like to use Number Characters?" + "\n" + "Choose Y or N");
+    var numberChoice = prompt("Would you like to use Number Characters?" + "\n" + "Choose Y or N").toUpperCase();
         if (numberChoice === "Y") {
             var totalString = numbers;
         }
@@ -19,17 +19,17 @@ function writePassword() {
             var totalString = "";
           }
       
-    var specialChoice = prompt("Would you like to use Special Characters?" + "\n" + "Choose Y or N");
+    var specialChoice = prompt("Would you like to use Special Characters?" + "\n" + "Choose Y or N").toUpperCase();
         if(specialChoice === "Y") {
             totalString = totalString.concat(specialChars);
         }
 
-    var lowerChoice = prompt("Would you like to use Lower Case Letters?" + "\n" + "Choose Y or N");
+    var lowerChoice = prompt("Would you like to use Lower Case Letters?" + "\n" + "Choose Y or N").toUpperCase();
         if(lowerChoice === "Y") {
             totalString = totalString.concat(lowerCase);
         }
 
-    var upperChoice = prompt("Would you like to use Upper Case Letters?" + "\n" + "Choose Y or N");
+    var upperChoice = prompt("Would you like to use Upper Case Letters?" + "\n" + "Choose Y or N").toUpperCase();
         if(upperChoice === "Y") {
             totalString = totalString.concat(upperCase);
         }
